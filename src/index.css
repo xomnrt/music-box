@@ -1,0 +1,140 @@
+:root {
+  --color-black: #08020D;
+  --color-green: #34C176;
+  --color-light-gray: #E0E0E0;
+  --color-gray: #CACACA;
+  --color-orange: #F89202;
+  --color-purple: #5328A1;
+  --color-dark-gray: #3C3B3D;
+  --color-dark-red: #95390C;
+
+  --custom-gradient: linear-gradient(221deg, rgba(149, 57, 12, 1) 8%, rgba(83, 40, 161, 1) 72%);
+
+  font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-black);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex: none;
+  scroll-snap-align: center;
+}
+
+.hero {
+  background-image: url("src/assets/images/First Section Desktop.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.mobile-app {
+  height: 60vh;
+}
+
+.contacts {
+  background: var(--custom-gradient);
+  height: 40vh;
+}
+
+.pricing-container {
+  display: flex;
+  flex-flow: column wrap;
+
+  width: 98%;
+  height: 98%;
+
+  border: solid 1px green;
+
+  margin: 5% auto;
+}
+
+.pricing-title {
+  border: solid 1px blue;
+
+  margin: 1em;
+
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.pricing-note {
+  border: solid 1px mediumslateblue;
+
+  margin: 1em;
+
+  text-align: center;
+
+}
+
+.card-container {
+  margin: 1em;
+
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  flex-grow: 3;
+
+  justify-content: space-evenly;
+  align-items: stretch;
+
+  border: solid 1px red;
+}
+
+.card {
+  margin: 1em;
+  flex-grow: 1;
+
+  border: solid 1px orange;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .card-container {
+    flex-direction: column;
+  }
+}

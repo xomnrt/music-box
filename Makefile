@@ -5,7 +5,7 @@ install:
 	npm ci
 
 build: install
-	rm -rf public
+	rm -rf dist
 	npm run build
 
 start: build
