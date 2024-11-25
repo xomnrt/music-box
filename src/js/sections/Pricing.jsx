@@ -1,8 +1,40 @@
-const PricingCard = () => {
+/* eslint-disable react/prop-types */
+const variants = [
+    {
+        title: "Бесплатная",
+        price: 0,
+        note: `Оплата в месяц.
+        Бесплатный тариф предоставляет доступ ко всей коллекции музыки.
+        Присутствует реклама`,
+    },
+    {
+        title: "Стандартная",
+        price: 250,
+        note: `Оплата в месяц.
+        Стандартный тариф предоставляет доступ ко всей коллекции музыки в среднем качестве`,
+    },
+    {
+        title: "Премиум",
+        price: 500,
+        note: `Оплата в месяц.
+        Премиум тариф предоставляет доступ ко всей коллекции музыки в высоком качестве`,
+    },
+]
+
+const PricingCard = ({ title, price, note }) => {
     return (
-        <div className="card"></div>
+        <div className="card">
+            <div className="inner-card">
+                <h2 className="pricing-variant-title">{title}</h2>
+                <div className="price">{price}<span className="rubble">руб.</span></div>
+                <button className="pricing-subscribe-button" action="" type="submit">Оформить</button>
+                <p className="variant-note">{note}</p>
+            </div>
+        </div>
     );
 }
+
+
 
 const Pricing = () => {
 
@@ -12,10 +44,8 @@ const Pricing = () => {
                 <div className="pricing-title">
                     <h2>Формы подписки</h2>
                 </div>
-                <div className="card-container">
-                    <PricingCard />
-                    <PricingCard />
-                    <PricingCard />
+                <div className="cards-container">
+                    {variants.map((variant, idx) => <PricingCard key={idx} {...variant} />)}
                 </div>
                 <div className="pricing-note">
                     <span>На всех тарифах возможно прослушивание музыки с мобильных устройств.
