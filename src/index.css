@@ -81,7 +81,7 @@ main {
 
 .pricing-container {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
 
   width: 98%;
   max-width: 100%;
@@ -145,8 +145,9 @@ main {
 
   border: solid 1px orange;
   text-align: center;
-
   align-items: stretch;
+
+  scroll-snap-align: center;
 
   border-radius: 30px;
 
@@ -211,16 +212,13 @@ main {
 
   section {
     width: 100vw;
-
+    min-height: fit-content;
     display: flex;
 
     flex-direction: column;
-    flex-wrap: nowrap;
 
     justify-content: center;
     align-items: center;
-
-    scroll-snap-align: center;
 
     text-transform: uppercase;
 
@@ -228,11 +226,11 @@ main {
 
   .pricing-container {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column;
     box-sizing: border-box;
 
-    width: 98%;
-    max-width: 100%;
+    width: 100%;
+    min-height: 350vh;
 
     border: solid 1px green;
 
@@ -241,14 +239,10 @@ main {
 
   .cards-container {
     display: flex;
-
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    justify-content: space-evenly;
-    align-items: stretch;
-
     max-width: 100%;
+    flex-direction: column;
+
+    justify-content: center;
 
     border: solid 1px white;
 
@@ -257,5 +251,45 @@ main {
   .card {
     width: 90%;
     max-width: 100%;
+
+    height: 30%;
+
   }
+
+  .inner-card {
+    margin: 1em;
+    height: 100%;
+    border: solid 1px yellow;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-subscribe-button {
+    margin: auto;
+    padding: 2%;
+
+    background: transparent;
+    color: var(--color-light-gray);
+    font-family: inherit;
+    font-size: 1em;
+    text-transform: uppercase;
+
+    border-radius: 20px;
+    border: 1px solid var(--color-light-gray);
+
+    width: 70%;
+    max-width: 300px;
+    max-height: 100px;
+  }
+
+  .variant-note {
+    margin-top: 30%;
+    text-transform: none;
+  }
+
+  .price {
+    margin-top: 50%;
+  }
+
 }
