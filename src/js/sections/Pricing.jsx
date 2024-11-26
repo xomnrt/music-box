@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 const variants = [
     {
+        variant: "free",
         title: "Бесплатная",
         price: 0,
         note: `Оплата в месяц.
@@ -8,12 +9,14 @@ const variants = [
         Присутствует реклама`,
     },
     {
+        variant: "standart",
         title: "Стандартная",
         price: 250,
         note: `Оплата в месяц.
         Стандартный тариф предоставляет доступ ко всей коллекции музыки в среднем качестве`,
     },
     {
+        variant: "premium",
         title: "Премиум",
         price: 500,
         note: `Оплата в месяц.
@@ -21,16 +24,18 @@ const variants = [
     },
 ]
 
-const PricingCard = ({ title, price, note }) => {
+const PricingCard = ({ variant, title, price, note }) => {
+    const classname = "card " + variant;
+
     return (
-        <div className="card">
+        <div className={classname}>
             <div className="inner-card">
                 <h2 className="pricing-variant-title">{title}</h2>
                 <div className="price">{price}<span className="rubble">руб.</span></div>
                 <button className="pricing-subscribe-button" action="" type="submit">Оформить</button>
                 <p className="variant-note">{note}</p>
             </div>
-        </div>
+        </div >
     );
 }
 
