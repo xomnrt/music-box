@@ -148,15 +148,15 @@
 }
 
 .free {
-    background-image: url(../src/assets/images/FreeBg.png);
+    background-image: url(../../public/FreeBg.png);
 }
 
 .standart {
-    background-image: url(../src/assets/images/StandartBg.png);
+    background-image: url(../../public/StandartBg.png);
 }
 
 .premium {
-    background-image: url(../src/assets/images/PremiumBg.png);
+    background-image: url(../../public/PremiumBg.png);
 }
 
 .free,
