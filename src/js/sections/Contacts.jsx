@@ -27,10 +27,10 @@ const Contacts = () => {
                     <div className="socials footer-section">
                         <h3>Подписывайтесь</h3>
                         <div className="socials-imgs">
-                            <img className="social-icon" src="../public/instagram.png"></img>
-                            <img className="social-icon" src="../public/whatsapp.png"></img>
-                            <img className="social-icon" src="../public/youtube.png"></img>
-                            <img className="social-icon" src="../public/tik-tok.png"></img>
+                            <img className="social-icon" src="public/instagram.png"></img>
+                            <img className="social-icon" src="public/whatsapp.png"></img>
+                            <img className="social-icon" src="public/youtube.png"></img>
+                            <img className="social-icon" src="public/tik-tok.png"></img>
                         </div>
                     </div>
                 </div>
